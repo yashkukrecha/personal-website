@@ -55,13 +55,14 @@
 }
 
 .tech-pill-project {
-    background-color: #f3f4f6;
-    color: #4b5563;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border: 1px solid #e5e7eb;
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 4px 12px;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.2s;
 }
 
 @media only screen and (max-width: 800px) {

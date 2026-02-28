@@ -2,20 +2,16 @@ import React from "react";
 
 const IndividualHobby = ({ hobby, description, image }) => {
   const imgSrc = new URL(`../Icons/${image}.png`, import.meta.url).href;
+  
   return (
-    <div id="hobby">
-      <div className="column-container" id="hobby-container">
-        <h3 id="hobby-name"> {hobby} </h3>
-        <h4 className="desc" id="hobby-desc">
-          {" "}
-          {description}{" "}
-        </h4>
+    <div className="hobby-card">
+      <div className="hobby-image-container">
+        <img className="hobby-image" alt={hobby} src={imgSrc} />
       </div>
-      <img
-        id="image"
-        alt="hobby-icon"
-        src={imgSrc}
-      ></img>
+      <div className="hobby-content">
+        <h3 className="hobby-name">{hobby}</h3>
+        <p className="hobby-description">{description}</p>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import "../Styles/Projects.css";
-import "../Styles/IndividualProject.css";
 import "../Styles/App.css";
 import IndividualProject from "../Components/IndividualProject";
 

@@ -1,73 +1,67 @@
-.hobby-carousel {
-  max-width: 50%;
+/* Grid Layout */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
   margin: 40px auto;
-  background: #fff;
+  padding: 0 20px;
+}
+
+/* Hobby Card Styling */
+.hobby-card {
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.5);
-  padding: 32px 24px 56px 24px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Matches Experience/Projects */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hobby-arrow {
-  background: #eee;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: background 0.2s;
+.hobby-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(191, 87, 0, 0.12);
 }
 
-.hobby-arrow:hover {
-  background: #d1d1d1;
+/* Image Handling */
+.hobby-image-container {
+  width: 100%;
+  height: 200px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
 }
 
-#hobby-container {
-    width: 40%;
+.hobby-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the space without stretching */
 }
 
-#hobby-name {
-    margin: 0px;
+/* Content Styling */
+.hobby-content {
+  padding: 1.5rem;
+  text-align: left; /* Aligns with Project card text */
 }
 
-#hobby {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
+.hobby-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
 }
 
-#hobby:hover {
-  transform: translateY(-4px);
+.hobby-description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
 }
 
-#image {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
-    margin: 10px;
-    padding: 10px;
-    background-color: white;
-}
-
-@media only screen and (max-width: 800px) {
-    #image {
-        width: 50vw;
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
-        margin: 10px;
-        padding: 0px;
-    }
-
-    #hobby {
-        flex-direction: column;
-    }
-
-    #hobby-desc {
-        display: none;
-    }
+/* Responsive adjust for mobile */
+@media only screen and (max-width: 600px) {
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
 }
