@@ -29,6 +29,11 @@ const list = [
     description: "I've made apple pie, brownies, chocolate chip cookies, cinnamon rolls, tiramisu, and banana bread so far!",
     image: "baking",
   },
+  {
+    hobby: "Poker",
+    description: "Let me know if you ever want to run a game. I'm always down.",
+    image: "poker",
+  },
 ];
 
 const Hobbies = () => {
