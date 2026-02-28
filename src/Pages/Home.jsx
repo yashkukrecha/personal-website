@@ -30,7 +30,12 @@ export default function Home() {
         </h3>
         <div className="row-container" id="contact-container">
           {list.map((element, index) => (
-            <Info index={index} method={element.method} link={element.link} />
+            <Info
+              key={element.method} // Using 'method' as a unique key (Email, LinkedIn, etc.)
+              index={index}
+              method={element.method}
+              link={element.link}
+            />
           ))}
         </div>
       </div>

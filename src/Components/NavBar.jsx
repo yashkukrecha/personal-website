@@ -5,37 +5,11 @@ import Projects from "../Pages/Projects.jsx";
 import Hobbies from "../Pages/Hobbies.jsx";
 import Experience from "../Pages/Experience.jsx";
 import "../Styles/NavBar.css";
-import { Link, animateScroll as scroll } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { Link, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar() {
-  useEffect(() => {
-    const handleScroll = function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      window.scrollTo({
-        top:
-          targetElement.offsetTop - document.querySelector("nav").offsetHeight,
-        behavior: "smooth",
-      });
-    };
-
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks.forEach((link) => {
-      link.addEventListener("click", handleScroll);
-    });
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      navLinks.forEach((link) => {
-        link.removeEventListener("click", handleScroll);
-      });
-    };
-  }, []);
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -46,43 +20,51 @@ export default function NavBar() {
       <nav>
         <ul>
           <li>
-            <a href="#section1">About</a>
+            <Link to="section1" smooth={true} onClick={() => console.log("Link clicked!")} duration={500} offset={-70}>
+              About
+            </Link>
           </li>
           <li>
-            <a href="#section2">Skills</a>
+            <Link to="section2" smooth={true} duration={500} offset={-70}>
+              Skills
+            </Link>
           </li>
           <li>
-            <a href="#section3">Projects</a>
+            <Link to="section3" smooth={true} duration={500} offset={-70}>
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#section4">Experience</a>
+            <Link to="section4" smooth={true} duration={500} offset={-70}>
+              Experience
+            </Link>
           </li>
           <li>
-            <a href="#section5">Hobbies</a>
+            <Link to="section5" smooth={true} duration={500} offset={-70}>
+              Hobbies
+            </Link>
           </li>
         </ul>
       </nav>
 
+      {/* Ensure your IDs match the "to" prop in the Link components */}
       <section id="section1">
         <Home />
       </section>
-
       <section id="section2">
         <Skills />
       </section>
-
       <section id="section3">
         <Projects />
       </section>
-
       <section id="section4">
         <Experience />
       </section>
-
       <section id="section5">
         <Hobbies />
       </section>
 
+      {/* ... back to top button ... */}
       <button
         className="button"
         id="scroll-to-top-button"
