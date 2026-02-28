@@ -4,36 +4,37 @@ import IndividualExperience from "../Components/IndividualExperience";
 
 const experiences = [
   {
+    company: "Jump Trading",
+    description: "Incoming @ Jump Trading",
+    techStack: ["C++"],
+    dates: "June 2026"
+  },
+  {
     company: "Cox Automotive",
-    image: "cox",
     description: "Built internal tools improving vehicle metadata search and APIs.",
     techStack: ["Go", ".NET", "Flask", "AWS", "Terraform", "NUnit", "Cake", "React", "Docker"],
-    dates: "May 2025 - Present",
+    dates: "May 2025 - August 2025",
   },
   {
     company: "Scale AI",
-    image: "scale",
     description: "Evaluated and authored LLM code prompts and datasets.",
     techStack: ["C++", "Rust", "C", "Python"],
-    dates: "February 2025 - Present",
+    dates: "February 2025 - December 2026",
   },
   {
     company: "Seedling",
-    image: "seedling volunteer portal",
     description: "Built full-stack portal for volunteer hour tracking automation.",
     techStack: ["React", "JavaScript", "Node.js", "Express.js", "MySQL", "AWS", "Firebase Authentication"],
-    dates: "August 2024 - Present",
+    dates: "August 2024 - May 2025",
   },
   {
-    company: "TPEO",
-    image: "tpeo",
+    company: "Texas Product Engineering Organization",
     description: "Led curriculum, recruitment, and engineering management as engineering director.",
     techStack: ["React + React Native", "JavaScript", "Node.js", "Express.js", "Google Cloud Platform", "Docker", "Vercel", "Git"],
     dates: "September 2023 - Present",
   },
   {
     company: "Longhorn Developers",
-    image: "longhorn developers",
     description: "Engineered student-facing registration tools such as UT Registration Plus.",
     techStack: ["React", "TypeScript", "MySQL"],
     dates: "February 2025 - May 2025",

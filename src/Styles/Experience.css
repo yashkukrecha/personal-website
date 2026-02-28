@@ -1,9 +1,9 @@
 .experience-carousel {
-  max-width: 50%;
+  max-width: 100%;
   margin: 40px auto;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 32px 24px 56px 24px;
   text-align: center;
   position: relative;
@@ -99,12 +99,14 @@
   justify-content: center;
 }
 
-.tech-item {
-  background-color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  color: #333;
+.tech-pill-exp {
+    background-color: #ffffff;
+    color: #4b5563;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
 }
 
 @media only screen and (max-width: 800px) {

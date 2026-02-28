@@ -1,4 +1,4 @@
-import "../Styles/IndividualProject.css";
+import "../Styles/Projects.css";
 import "../Styles/App.css";
 
 export default function IndividualProject({ project }) {
@@ -9,7 +9,7 @@ export default function IndividualProject({ project }) {
       
       <div className="tech-stack-container">
         {project.stack.map((tech, idx) => (
-          <span key={idx} className="tech-pill">
+          <span key={idx} className="tech-pill-project">
             {tech}
           </span>
         ))}
