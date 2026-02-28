@@ -1,0 +1,121 @@
+.experience-carousel {
+  max-width: 50%;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  padding: 32px 24px 56px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(235, 235, 235);
+}
+
+.carousel-arrows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.experience-arrow {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.experience-arrow:hover {
+  background: #d1d1d1;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bbb;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: #333;
+}
+
+.experience {
+  transition: transform 0.2s ease;
+}
+
+.experience:hover {
+  transform: translateY(-4px);
+}
+
+.experience-name {
+    margin: 0px;
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.experience-dates {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0px;
+}
+
+.experience-description {
+  margin-bottom: 0.75rem;
+}
+
+.experience-techstack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.tech-item {
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media only screen and (max-width: 800px) {
+  .experience-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .experience-desc {
+    display: none;
+  }
+}

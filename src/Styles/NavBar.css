@@ -1,0 +1,89 @@
+/* Base NavBar styles */
+nav {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1%;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5%;
+    transition: color 0.4s ease;
+}
+
+nav a:hover {
+    color: #BF5700;
+}
+
+#section1 {
+    padding-top: 3%;
+}
+
+/* Responsive NavBar for small screens */
+@media only screen and (max-width: 800px) {
+    nav {
+        background-color: #333;
+        padding: 10px 0;
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 0 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        list-style-type: none;
+        margin: 0;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav ul {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+    }
+
+    nav li {
+        flex: 0 0 auto;
+        margin-right: 0;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+
+    #section1 {
+        padding-top: 12%;
+    }
+}
