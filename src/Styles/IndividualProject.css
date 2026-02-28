@@ -1,50 +1,66 @@
 #project-container {
-    justify-content: space-evenly;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
     background-color: white;
-    width: 18%;
-    padding-left: 1%;
-    padding-right: 1%;
+    width: 22%;
+    padding: 1.5%;
     margin: 1%;
-    cursor: pointer;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
 }
 
-#project-title{
-    text-align: center;
-    margin-bottom: 0%;
+/* Subtle hover to add life without being a "button" */
+#project-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(191, 87, 0, 0.2);
 }
 
-#project-icon {
-    margin-top: 2%;
-    width: 150px;
-    height: 150px;
-    padding: 0px;
+#project-title {
+    text-align: center; 
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #333;
 }
 
+.desc {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Tech Stack Styling */
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto; /* Pushes stack to the bottom of the card */
+}
+
+.tech-pill {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+}
+
+/* Mobile Responsive Updates */
 @media only screen and (max-width: 800px) {
     #project-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        background-color: white;
-        width: 92vw;
-        margin: 0.5%;
+        width: 90vw;
+        margin: 10px auto;
+        padding: 20px;
     }
 
-    #project-title{
-        font-size: 100%;
-        text-align: center;
-        margin-bottom: 5%;
-    }
-
-    #project-icon {
-        margin-top: 2%;
-        width: 20vw;
-        height: 20vw;
-        padding: 2%;
+    #project-title {
+        font-size: 1.2rem;
     }
 }

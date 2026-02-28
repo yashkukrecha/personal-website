@@ -2,7 +2,6 @@ import "../Styles/Skills.css";
 import "../Styles/App.css";
 
 import BarChart from "../Components/BarChart";
-import oracle from "../Icons/oracle.png";
 
 export default function Skills() {
   const data = {
@@ -43,20 +42,6 @@ export default function Skills() {
       <h2 className="titles"> Skills </h2>
       <div id="bar-chart">
         <BarChart data={data} options={options} />
-      </div>
-      <p></p>
-      <div className="row-container" id="certifications">
-        <div className="column-container" id="oracle">
-          <img
-            id="o-icon"
-            alt="oracle-icon"
-            src={oracle}
-          ></img>
-          <h3 className="desc">
-            {" "}
-            Oracle Certified Associate, Java SE 8 Programmer{" "}
-          </h3>
-        </div>
       </div>
     </div>
   );
